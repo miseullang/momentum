@@ -9,6 +9,7 @@ html,body {
 }
 
 input {
+    font-size: 1rem;
     padding-block: 0.2rem;
     background: none;
     border: none;
@@ -25,6 +26,12 @@ input:focus {
     border-bottom: 2px solid rgba(255,255,255,1);
 }
 
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -37,6 +44,10 @@ div#BG {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
@@ -46,6 +57,12 @@ div#BG {
 div#quote {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#quote span {
+    text-align: center;
 }
 
 #clock {
