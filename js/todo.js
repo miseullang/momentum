@@ -28,7 +28,8 @@ function createTodo(newTodo) {
     const span = document.createElement('span');
     span.innerText = newTodo.text; // newTodo를 그대로 넣어주면 object object로 반환하므로, newTodo.text로 바꿔주기
     const button = document.createElement('button');
-    button.innerText = '❌';
+    button.innerText = '지우기';
+    button.classList.add('todoClear')
     button.addEventListener('click', deleteTodo)
 
     li.appendChild(span);

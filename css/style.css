@@ -10,11 +10,13 @@ html,body {
 
 input {
     font-size: 1rem;
-    padding-block: 0.2rem;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
 }
 input::placeholder {
     color: rgba(255,255,255,0.6);
@@ -30,6 +32,18 @@ button {
     background: none;
     border: none;
     outline: none;
+}
+
+.todoClear {
+    padding: 0.1rem 0.3rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.todoClear:hover {
+    background-color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,1);
 }
 
 a {
@@ -55,20 +69,45 @@ div#BG {
 }
 
 div#quote {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 780px;
 }
 
 div#quote span {
     text-align: center;
+    margin-top: 1rem;
 }
 
 #clock {
-    font-size: 4rem;
+    font-size: 6rem;
 }
 
 #greeting {
-    font-size: 2.24rem;
+    font-size: 4rem;
+}
+
+/* 투두 */
+.todo-input {
+    margin-bottom: 1rem;
+}
+ul#todo-list li{
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* 날씨 */
+div#weather {
+    position: fixed;
+    z-index: 3;
+    top: 1rem;
+    right: 1rem;
 }
