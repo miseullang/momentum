@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgba(255,255,255,0.6);
+}
+
+html,body {
+    font-size: 18px;
+}
+
+input {
+    font-size: 1rem;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
+}
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+}
+input:focus {
+    transition: border .4s;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,1);
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.todoClear {
+    padding: 0.1rem 0.3rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.todoClear:hover {
+    background-color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,1);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+div#BG {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+div#quote {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 780px;
+}
+
+div#quote span {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#clock {
+    font-size: 6rem;
+}
+
+#greeting {
+    font-size: 4rem;
+}
+
+/* 투두 */
+.todo-input {
+    margin-bottom: 1rem;
+}
+ul#todo-list li{
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* 날씨 */
+div#weather {
+    position: fixed;
+    z-index: 3;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* 리프레시 아이콘 */
+img#refresh {
+    position: fixed;
+    z-index: 3;
+    bottom: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity .4s;
+}
+
+img#refresh:hover {
+    opacity: 1;
+}
+
+#music{
+    position: fixed;
+    z-index: 3;
+    top: 1rem;
+    left: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+#music:hover {
+    color: white;
+}
+
+#music:hover img {
+    opacity: 1;
+}
+
+#music img {
+    opacity: 0.6;
+    margin-right: 0.5rem;
+    transition: all .4s;
+}
+
+#painting {
+    position: fixed;
+    z-index: 3;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0.6;
+    transition: opacity .4s;
+}
+
+#painting:hover{
+    opacity: 1;
+}
