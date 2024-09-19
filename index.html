@@ -4,32 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet" type="text/css"/>
-    <title>Own my momentum</title>
+    <title>💖 기분이 태도가 되지 않게 💖</title>
 </head>
 <body>
     <div id="BG">
+        <h1 id="clock">00:00:00</h1>
         <form id="login-form" class="hidden">
             <input required
              maxlength="15"
              type="text"
              placeholder="이름을 입력해주세요."/>
-            <button>로그인</button>
         </form>
-        <h1 id="clock">00:00:00</h1>
         <h2 id="greeting" class="hidden"></h2>
         <form id="todo-form">
-            <input type="text" placeholder="오늘의 할 일을 입력하세요." required/>
+            <input class="todo-input"
+            type="text"
+            placeholder="오늘의 할 일"
+            required/>
         </form>
         <ul id="todo-list"></ul>
         <div id="quote">
             <span></span>
             <span></span>
         </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
-        </div>
+
     </div>
+
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+
+    <img id="refresh" src="img/refresh.svg" alt="배경 바꾸기 아이콘"/>
+
+    <p id="music">
+        <img src="img/music.svg" alt="음악 아이콘"/>
+        lofi music for studying, work
+    </p>
+
+    <div id="player"></div>
+
+    <a id="painting" href="https://miseullang.github.io/VanillaJSCanvas/" target="_blank">
+        <img src="img/pencil.svg" alt="밈 메이커 바로가기"/>
+    </a>
 
     <script src="./js/greeting.js"></script>
     <script src="./js/clock.js"></script>
@@ -37,5 +54,7 @@
     <script src="./js/background.js"></script>
     <script src="./js/todo.js"></script>
     <script src="./js/weather.js"></script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
