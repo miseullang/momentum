@@ -15,3 +15,33 @@ const randomKey = keys[Math.floor(Math.random() * keys.length)];
 const todaysBG = images[randomKey];
 
 BG.style.backgroundImage = `url(${todaysBG})`;
+
+// 음악 재생
+let player;
+let isPlaying = false;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '0',
+        width: '0',
+        videoId: 'hGrIgIfCxP0',
+        events: {
+        'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady() {
+    const music = document.querySelector('#music');
+    
+    music.addEventListener('click', function() {
+      if (isPlaying) {
+        player.pauseVideo();
+        music.innerHTML = `<img src="img/music.svg" alt="음악 아이콘"/> Pause`;
+    } else {
+        player.playVideo();
+        music.innerHTML = `<img src="img/music.svg" alt="음악 아이콘"/> Now Playing : lofi music for studying, work`;
+      }
+      isPlaying = !isPlaying;
+    });
+}

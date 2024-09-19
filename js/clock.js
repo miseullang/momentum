@@ -1,6 +1,5 @@
 const clock = document.querySelector('#clock');
 
-
 function getClock() {
     const date = new Date();
     const hour = date.getHours() > 12 

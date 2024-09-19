@@ -1,6 +1,7 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
+const refresh = document.querySelector('#refresh');
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -20,6 +21,10 @@ function paintGreetings(username) {
     greeting.innerText = `Hello, ${username}`;
 }
 
+function hanleReroad () {
+    window.location.reload();
+}
+
 // 로컬스토리지에 유저 정보가 있는지 확인
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
@@ -34,3 +39,4 @@ if(savedUsername === null) {
 }
 
 loginForm.addEventListener('submit', onLoginSubmit);
+refresh.addEventListener('click', hanleReroad);

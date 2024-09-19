@@ -111,3 +111,60 @@ div#weather {
     top: 1rem;
     right: 1rem;
 }
+
+/* 리프레시 아이콘 */
+img#refresh {
+    position: fixed;
+    z-index: 3;
+    bottom: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity .4s;
+}
+
+img#refresh:hover {
+    opacity: 1;
+}
+
+#music{
+    position: fixed;
+    z-index: 3;
+    top: 1rem;
+    left: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+#music:hover {
+    color: white;
+}
+
+#music:hover img {
+    opacity: 1;
+}
+
+#music img {
+    opacity: 0.6;
+    margin-right: 0.5rem;
+    transition: all .4s;
+}
+
+#painting {
+    position: fixed;
+    z-index: 3;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0.6;
+    transition: opacity .4s;
+}
+
+#painting:hover{
+    opacity: 1;
+}
