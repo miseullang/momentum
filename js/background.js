@@ -6,6 +6,9 @@ images = {
     'img05' : 'https://files.grafolio.ogq.me/real/5aa85b3f01960/IMAGE/eba053e0-67e9-4e13-bb06-32471d42fe76.jpg',
     'img06' : 'https://files.grafolio.ogq.me/real/5f99707007fdc/IMAGE/20219b88-d262-4b8f-9b1d-e88c8350cade.jpg',
     'img07' : 'https://files.grafolio.ogq.me/real/5fe671c469db8/IMAGE/6c455415-60ba-4fae-829b-9394052a96a4.jpeg',
+    'img08' : 'https://files.grafolio.ogq.me/real/7e1e44cf19dc4a11ae66a43309d4cb0d/IMAGE/e9f16cf5-2783-4d84-a80a-c4f608d4712d.jpg',
+    'img09' : 'https://files.grafolio.ogq.me/real/5fc6e13e534a3/IMAGE/592e1236-fbda-4a65-aa83-aea9e4927327.jpg',
+    'img10' : 'https://files.grafolio.ogq.me/real/5facbb5362b4e/IMAGE/806c1c60-b75f-4dce-9ca8-68d4dd8ac70c.jpeg'
 }
 
 const BG = document.querySelector('#BG');
