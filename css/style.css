@@ -8,6 +8,10 @@ html,body {
     font-size: 18px;
 }
 
+ul,li {
+    list-style: none;
+}
+
 input {
     font-size: 1rem;
     padding: 0.4rem 0.2rem;
@@ -39,6 +43,7 @@ button {
     border: 1px solid rgba(255,255,255,0.6);
     border-radius: 4px;
     margin-left: 5px;
+    height: 1.2rem;
 }
 
 .todoClear:hover {
@@ -85,23 +90,147 @@ div#quote span {
     margin-top: 1rem;
 }
 
+/* 시계 */
+
 #clock {
     font-size: 6rem;
+}
+
+.min {
+    font-size: 3rem;
+}
+
+/* 로그인 */
+#greeting-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #greeting {
     font-size: 4rem;
 }
 
+#show-more {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+
+    cursor: pointer;
+    transition: .4s;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#show-more:hover {
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.2);
+}
+
+
 /* 투두 */
+#todo-form, #shortcut-box {
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 3rem;
+    translate: 0 -50%;
+
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(2px);
+
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+#todo-form h3 {
+    width: 100%;
+    text-align: center;
+}
+
 .todo-input {
     margin-bottom: 1rem;
 }
-ul#todo-list li{
+
+
+#todo-list li{
     margin-bottom: 0.5rem;
     display: flex;
-    justify-content: left;
+}
+
+/* 투두 취소선 */
+.completed span {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* 체크박스 스타일 */
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+
+    margin-right: 0.7rem;
+    vertical-align: middle;
+
+    /* 브라우저에 따른 appearance 설정 */
+    -webkit-appearance: none; /* Safari, Chrome */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* 표준 */
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgba(255,255,255,0.6);
+    border-color: rgba(255,255,255,0.8);
+
+    /* 브라우저에 따른 appearance 설정 */
+    -webkit-appearance: none; /* Safari, Chrome */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* 표준 */
+}
+
+/* 바로가기 도구 */
+#shortcut-box {
+    left: auto;
+    right: 3rem;
+
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+#shortcut-box li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#shortcut-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bolder;
+    
+    width: 2rem;
+    height: 2rem;
+
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+#shortcut-box span {
+    font-size: 0.7rem;
 }
 
 /* 날씨 */

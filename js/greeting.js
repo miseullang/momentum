@@ -1,7 +1,9 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
+const greetingBox = document.querySelector('#greeting-box');
 const refresh = document.querySelector('#refresh');
+const logout = document.querySelector('#show-more');
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -17,12 +19,19 @@ function onLoginSubmit(event){
 
 // 유저 정보를 받았을 때
 function paintGreetings(username) {
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+    greetingBox.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText = `Hello, ${username}`;
 }
 
 function hanleReroad () {
     window.location.reload();
+}
+
+function handleLogout() {
+    if (confirm('로그아웃 하기')) {
+        localStorage.clear();
+        window.location.reload();
+    }
 }
 
 // 로컬스토리지에 유저 정보가 있는지 확인
@@ -40,3 +49,4 @@ if(savedUsername === null) {
 
 loginForm.addEventListener('submit', onLoginSubmit);
 refresh.addEventListener('click', hanleReroad);
+logout.addEventListener('click', handleLogout);
