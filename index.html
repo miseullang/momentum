@@ -8,27 +8,36 @@
 </head>
 <body>
     <div id="BG">
-        <h1 id="clock">00:00:00</h1>
+        <h1 id="clock">
+            <span id="am-pm" class="min"></span>
+            <span id="hour"></span>:<span id="minute"></span>
+            <span id="second" class="min"></span>
+        </h1>
         <form id="login-form" class="hidden">
             <input required
              maxlength="15"
              type="text"
              placeholder="이름을 입력해주세요."/>
         </form>
-        <h2 id="greeting" class="hidden"></h2>
-        <form id="todo-form">
-            <input class="todo-input"
-            type="text"
-            placeholder="오늘의 할 일"
-            required/>
-        </form>
-        <ul id="todo-list"></ul>
+        <div id="greeting-box" class="hidden">
+            <h2 id="greeting"></h2>
+            <div id="show-more">…</div>
+        </div>
+
         <div id="quote">
             <span></span>
             <span></span>
         </div>
-
     </div>
+
+    <form id="todo-form">
+        <h3>To-Do List</h3>
+        <input class="todo-input"
+        type="text"
+        placeholder="오늘의 할 일"
+        required/>
+        <ul id="todo-list"></ul>
+    </form>
 
     <div id="weather">
         <span></span>
@@ -47,6 +56,21 @@
     <a id="painting" href="https://miseullang.github.io/VanillaJSCanvas/" target="_blank">
         <img src="img/pencil.svg" alt="밈 메이커 바로가기"/>
     </a>
+
+    <ul id="shortcut-box">
+        <li>
+            <a href="https://www.naver.com">N</a>
+            <span>naver</span>
+        </li>
+        <li>
+            <a href="https://www.google.com">G</a>
+            <span>google</span>
+        </li>
+        <li>
+            <a href="https://nomadcoders.co">M</a>
+            <span>nomad</span>
+        </li>
+    </ul>
 
     <script src="./js/greeting.js"></script>
     <script src="./js/clock.js"></script>
