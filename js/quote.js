@@ -85,7 +85,15 @@ const quotes = [
 const quote = document.querySelector('#quote span:first-child');
 const author = document.querySelector('#quote span:last-child');
 
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+function changeQuote() {
+    const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    quote.innerText = todaysQuote.quote;
+    author.innerText = todaysQuote.author;
+}
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+// 처음 페이지 로드 시 명언을 설정
+changeQuote();
+
+// 30분마다 명언 변경
+const oneMinute = 60000;
+setInterval(changeQuote, oneMinute * 30);
